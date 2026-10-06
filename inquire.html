@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Initiate Architectural Commission | Expressive Model Company</title>
+  <meta name="description" content="Confidential private commission portal for Expressive Model Company. Strictly curated cohort of 6 bespoke architectural commissions annually.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=Syne:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Syne', 'sans-serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            mono: ['Space Grotesk', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[#040508] text-[#E2E8F0] selection:bg-cyan-500/30 selection:text-white overflow-x-hidden antialiased">
+
+  <!-- Ambient Orbs -->
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden" aria-hidden="true">
+    <div class="liquid-orb orb-india-1"></div>
+    <div class="liquid-orb orb-india-2"></div>
+    <div class="liquid-orb orb-india-3"></div>
+  </div>
+
+  <div id="liquid-cursor-glow" class="fixed pointer-events-none z-50 w-[380px] h-[380px] rounded-full -translate-x-1/2 -translate-y-1/2 opacity-0 transition-opacity duration-300 blur-[75px] bg-gradient-to-r from-cyan-400/20 via-fuchsia-500/20 to-amber-400/20"></div>
+
+  <!-- Navigation -->
+  <header class="fixed top-4 md:top-6 inset-x-0 z-40 flex justify-center px-4">
+    <nav class="relative flex items-center justify-between w-full max-w-6xl px-4 md:px-7 py-3 md:py-3.5 rounded-full border border-white/15 bg-white/[0.04] backdrop-blur-2xl shadow-[0_12px_40px_rgba(0,0,0,0.55)]">
+      
+      <a href="index.html" class="group flex items-center gap-3">
+        <div class="relative w-9 h-9 md:w-10 md:h-10 rounded-2xl p-[1px] bg-gradient-to-br from-cyan-400 via-fuchsia-500 to-amber-400">
+          <div class="w-full h-full rounded-[15px] bg-[#07090F]/90 backdrop-blur-md flex items-center justify-center">
+            <span class="font-display font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white via-cyan-200 to-amber-200 text-sm md:text-base">EM</span>
+          </div>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-display font-bold text-sm md:text-base tracking-wide text-white">
+            EXPRESSIVE <span class="text-xs px-1.5 py-0.5 rounded-full bg-cyan-400/10 text-cyan-300 font-mono border border-cyan-400/30">COMMISSION</span>
+          </span>
+          <span class="text-[9px] uppercase font-mono tracking-widest text-slate-400">Studio Engagement</span>
+        </div>
+      </a>
+
+      <div class="hidden lg:flex items-center gap-1 bg-white/[0.03] p-1.5 rounded-full border border-white/10 backdrop-blur-lg">
+        <a href="index.html" class="px-4 py-1.5 text-xs font-medium text-slate-300 hover:text-white rounded-full transition-all hover:bg-white/10">Atelier</a>
+        <a href="works.html" class="px-4 py-1.5 text-xs font-medium text-slate-300 hover:text-white rounded-full transition-all hover:bg-white/10">Built Works</a>
+        <a href="research.html" class="px-4 py-1.5 text-xs font-medium text-slate-300 hover:text-white rounded-full transition-all hover:bg-white/10">Computational Jali</a>
+        <a href="atelier.html" class="px-4 py-1.5 text-xs font-medium text-slate-300 hover:text-white rounded-full transition-all hover:bg-white/10">Architects</a>
+        <a href="patrons.html" class="px-4 py-1.5 text-xs font-medium text-slate-300 hover:text-white rounded-full transition-all hover:bg-white/10">Patrons</a>
+      </div>
+
+      <div class="flex items-center gap-2.5">
+        <button id="sound-toggle-btn" class="w-9 h-9 md:w-10 md:h-10 rounded-full flex items-center justify-center border border-white/10 bg-white/[0.05] text-slate-300 hover:text-white transition-all">
+          <i data-lucide="volume-2" class="w-4 h-4 sound-on-icon"></i>
+          <i data-lucide="volume-x" class="w-4 h-4 sound-off-icon hidden"></i>
+        </button>
+
+        <a href="inquire.html" class="liquid-glow-btn relative px-4 md:px-5 py-2 md:py-2.5 rounded-full text-xs font-semibold text-white tracking-wide border border-white/20 bg-gradient-to-r from-cyan-500 via-purple-600 to-amber-500 font-mono flex items-center gap-2 nav-pill-active">
+          <span>COMMISSION</span>
+          <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+        </a>
+
+        <button id="mobile-menu-toggle" class="lg:hidden w-9 h-9 rounded-full flex items-center justify-center border border-white/15 bg-white/[0.06] text-white">
+          <i data-lucide="menu" class="w-4 h-4"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-drawer" class="fixed inset-0 z-50 bg-[#040508]/90 backdrop-blur-3xl opacity-0 pointer-events-none transition-all duration-300 flex flex-col justify-between p-6">
+    <div class="flex items-center justify-between">
+      <span class="font-display font-bold text-sm tracking-wider text-white">EXPRESSIVE MODEL INDIA</span>
+      <button id="close-mobile-menu" class="w-10 h-10 rounded-full border border-white/20 bg-white/10 flex items-center justify-center text-white">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+    </div>
+    <div class="flex flex-col gap-5 py-6">
+      <a href="index.html" class="text-2xl font-display font-bold text-slate-200">Atelier Home</a>
+      <a href="works.html" class="text-2xl font-display font-bold text-slate-200">Indian Built Works</a>
+      <a href="research.html" class="text-2xl font-display font-bold text-slate-200">Computational Jali Lab</a>
+      <a href="atelier.html" class="text-2xl font-display font-bold text-slate-200">The Architects</a>
+      <a href="patrons.html" class="text-2xl font-display font-bold text-slate-200">Patrons & Royal Trusts</a>
+      <a href="inquire.html" class="text-2xl font-display font-bold text-cyan-300">Private Commission</a>
+    </div>
+  </div>
+
+  <!-- Main Commission Section -->
+  <section class="pt-36 md:pt-44 pb-28 px-4 md:px-8 relative z-20">
+    <div class="max-w-3xl mx-auto">
+      
+      <div class="text-center mb-10">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-cyan-400/30 bg-cyan-500/10 text-cyan-300 text-xs font-mono mb-4">
+          BESPOKE COMMISSION INITIATION
+        </div>
+        <h1 class="font-display font-extrabold text-3xl sm:text-5xl text-white mb-4">
+          Initiate Atelier Dialogue
+        </h1>
+        <p class="text-sm text-slate-300 font-light max-w-xl mx-auto leading-relaxed">
+          We accept a strictly curated cohort of 6 global commissions annually to guarantee uncompromising physical, structural, and optical perfection. Zero public price tags; strictly bespoke architectural design.
+        </p>
+      </div>
+
+      <!-- Commission Glass Card -->
+      <div class="liquid-glass-card p-8 md:p-12 rounded-3xl md:rounded-[36px] border border-white/20">
+        
+        <form id="inquiry-form" class="space-y-6">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-xs font-mono text-slate-400 uppercase tracking-wider mb-2">Patron / Organization Name</label>
+              <input type="text" required placeholder="e.g. Maharaja Gajendra Singh / Piramal Office" class="w-full px-4 py-3 rounded-2xl bg-white/[0.04] border border-white/15 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 text-sm font-sans transition-all">
+            </div>
+            <div>
+              <label class="block text-xs font-mono text-slate-400 uppercase tracking-wider mb-2">Direct Contact / Confidential Email</label>
+              <input type="email" required placeholder="patron@estate-trust.in" class="w-full px-4 py-3 rounded-2xl bg-white/[0.04] border border-white/15 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 text-sm font-sans transition-all">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-mono text-slate-400 uppercase tracking-wider mb-2">Territorial Geography & Microclimate</label>
+            <select class="w-full px-4 py-3 rounded-2xl bg-[#07090F] border border-white/15 text-white focus:outline-none focus:border-cyan-400 text-sm font-sans transition-all">
+              <option>Western Ghats & Coastal Arabian Sea (Monsoon Salt Climate)</option>
+              <option>Thar Desert & Rajasthan (Arid 48°C Heat / Cold Nights)</option>
+              <option>Deccan Plateau / Bengaluru (Moderate Biophilic Microclimate)</option>
+              <option>Himalayan Alpine / Ladakh (Sub-Zero 4,000m+ Extreme Altitude)</option>
+              <option>Indo-Gangetic Basin / Varanasi Riverfront (Sub-Tropical Riverfront)</option>
+              <option>International / Island Sovereign Territory</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-xs font-mono text-slate-400 uppercase tracking-wider mb-2">Desired Typology</label>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+              <label class="commission-type-pill flex items-center justify-center p-3 rounded-xl border border-white/15 bg-white/[0.03] text-xs font-mono text-slate-300 cursor-pointer hover:border-cyan-400 transition-all">
+                <input type="radio" name="typology" value="cultural" class="hidden" checked>
+                <span>Lake Pavilion</span>
+              </label>
+              <label class="commission-type-pill flex items-center justify-center p-3 rounded-xl border border-white/15 bg-white/[0.03] text-xs font-mono text-slate-300 cursor-pointer hover:border-cyan-400 transition-all">
+                <input type="radio" name="typology" value="sanctuary" class="hidden">
+                <span>Private Estate</span>
+              </label>
+              <label class="commission-type-pill flex items-center justify-center p-3 rounded-xl border border-white/15 bg-white/[0.03] text-xs font-mono text-slate-300 cursor-pointer hover:border-cyan-400 transition-all">
+                <input type="radio" name="typology" value="tower" class="hidden">
+                <span>Marine Tower</span>
+              </label>
+              <label class="commission-type-pill flex items-center justify-center p-3 rounded-xl border border-white/15 bg-white/[0.03] text-xs font-mono text-slate-300 cursor-pointer hover:border-cyan-400 transition-all">
+                <input type="radio" name="typology" value="biome" class="hidden">
+                <span>Tech Biome</span>
+              </label>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-mono text-slate-400 uppercase tracking-wider mb-2">Spatial Scope</label>
+            <select class="w-full px-4 py-3 rounded-2xl bg-[#07090F] border border-white/15 text-white focus:outline-none focus:border-cyan-400 text-sm font-sans transition-all">
+              <option>Curated Pavilion (< 3,000 m²)</option>
+              <option>Private Generational Sanctuary (3,000 - 15,000 m²)</option>
+              <option>Civic Cultural Amphitheater (15,000 - 50,000 m²)</option>
+              <option>Super-Tall High-Rise / Masterplan Campus (50,000+ m²)</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-xs font-mono text-slate-400 uppercase tracking-wider mb-2">Spatial Vision & Heritage Aspiration</label>
+            <textarea rows="4" placeholder="Detail your site contours, sunlight orientation, stone preference (Dholpur, Makrana, Basalt), water access, and cultural timeline..." class="w-full px-4 py-3 rounded-2xl bg-white/[0.04] border border-white/15 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 text-sm font-sans transition-all resize-none"></textarea>
+          </div>
+
+          <button type="submit" class="w-full py-4 rounded-2xl bg-gradient-to-r from-cyan-400 via-fuchsia-500 to-amber-400 text-slate-950 font-display font-extrabold text-xs uppercase tracking-widest shadow-[0_10px_35px_rgba(0,245,212,0.3)] hover:scale-[1.01] transition-all">
+            Transmit Confidential Dossier
+          </button>
+
+          <p class="text-center font-mono text-[11px] text-slate-400">
+            Strict confidentiality guaranteed under international atelier non-disclosure protocols.
+          </p>
+        </form>
+
+        <!-- Success Confirmation -->
+        <div id="inquiry-success" class="hidden text-center py-12 space-y-4">
+          <div class="w-16 h-16 mx-auto rounded-full bg-cyan-400/20 border border-cyan-400 flex items-center justify-center text-cyan-300 animate-bounce">
+            <i data-lucide="check" class="w-8 h-8"></i>
+          </div>
+          <h2 class="font-display font-bold text-2xl text-white">Dossier Transmitted</h2>
+          <p class="text-sm text-slate-300 font-light max-w-sm mx-auto">
+            Our Senior Partners (Aarav Singhania & Ananya Deshmukh) will review your brief within 48 hours to arrange a confidential model preview.
+          </p>
+          <a href="works.html" class="inline-block px-6 py-2.5 rounded-full border border-white/20 bg-white/5 text-xs font-mono text-white hover:bg-white/10 transition-colors">
+            Return to Works Catalog
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-[#030407]/95 pt-12 pb-10 px-4 md:px-8">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between text-xs font-mono text-slate-400 gap-4">
+      <div>&copy; 2026 Expressive Model Company. Confidential Patron Protocol.</div>
+      <div class="flex gap-6">
+        <a href="index.html" class="hover:text-cyan-300">Atelier Home</a>
+        <a href="works.html" class="hover:text-cyan-300">Works Catalog</a>
+        <a href="atelier.html" class="hover:text-cyan-300">Architects</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

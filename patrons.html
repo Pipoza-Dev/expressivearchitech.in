@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Visionary Patrons & Royal Trusts | Expressive Model Company</title>
+  <meta name="description" content="Discover the prominent Indian trusts, industrial dynasties, and private collectors who commission Expressive Model Company.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=Syne:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Syne', 'sans-serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            mono: ['Space Grotesk', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[#040508] text-[#E2E8F0] selection:bg-cyan-500/30 selection:text-white overflow-x-hidden antialiased">
+
+  <!-- Ambient Orbs -->
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden" aria-hidden="true">
+    <div class="liquid-orb orb-india-1"></div>
+    <div class="liquid-orb orb-india-2"></div>
+    <div class="liquid-orb orb-india-3"></div>
+  </div>
+
+  <div id="liquid-cursor-glow" class="fixed pointer-events-none z-50 w-[380px] h-[380px] rounded-full -translate-x-1/2 -translate-y-1/2 opacity-0 transition-opacity duration-300 blur-[75px] bg-gradient-to-r from-cyan-400/20 via-fuchsia-500/20 to-amber-400/20"></div>
+
+  <!-- Navigation -->
+  <header class="fixed top-4 md:top-6 inset-x-0 z-40 flex justify-center px-4">
+    <nav class="relative flex items-center justify-between w-full max-w-6xl px-4 md:px-7 py-3 md:py-3.5 rounded-full border border-white/15 bg-white/[0.04] backdrop-blur-2xl shadow-[0_12px_40px_rgba(0,0,0,0.55)]">
+      
+      <a href="index.html" class="group flex items-center gap-3">
+        <div class="relative w-9 h-9 md:w-10 md:h-10 rounded-2xl p-[1px] bg-gradient-to-br from-cyan-400 via-fuchsia-500 to-amber-400">
+          <div class="w-full h-full rounded-[15px] bg-[#07090F]/90 backdrop-blur-md flex items-center justify-center">
+            <span class="font-display font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white via-cyan-200 to-amber-200 text-sm md:text-base">EM</span>
+          </div>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-display font-bold text-sm md:text-base tracking-wide text-white">
+            EXPRESSIVE <span class="text-xs px-1.5 py-0.5 rounded-full bg-cyan-400/10 text-cyan-300 font-mono border border-cyan-400/30">PATRONS</span>
+          </span>
+          <span class="text-[9px] uppercase font-mono tracking-widest text-slate-400">Trusts & Commissions</span>
+        </div>
+      </a>
+
+      <div class="hidden lg:flex items-center gap-1 bg-white/[0.03] p-1.5 rounded-full border border-white/10 backdrop-blur-lg">
+        <a href="index.html" class="px-4 py-1.5 text-xs font-medium text-slate-300 hover:text-white rounded-full transition-all hover:bg-white/10">Atelier</a>
+        <a href="works.html" class="px-4 py-1.5 text-xs font-medium text-slate-300 hover:text-white rounded-full transition-all hover:bg-white/10">Built Works</a>
+        <a href="research.html" class="px-4 py-1.5 text-xs font-medium text-slate-300 hover:text-white rounded-full transition-all hover:bg-white/10">Computational Jali</a>
+        <a href="atelier.html" class="px-4 py-1.5 text-xs font-medium text-slate-300 hover:text-white rounded-full transition-all hover:bg-white/10">Architects</a>
+        <a href="patrons.html" class="px-4 py-1.5 text-xs font-medium rounded-full transition-all nav-pill-active">Patrons</a>
+      </div>
+
+      <div class="flex items-center gap-2.5">
+        <button id="sound-toggle-btn" class="w-9 h-9 md:w-10 md:h-10 rounded-full flex items-center justify-center border border-white/10 bg-white/[0.05] text-slate-300 hover:text-white transition-all">
+          <i data-lucide="volume-2" class="w-4 h-4 sound-on-icon"></i>
+          <i data-lucide="volume-x" class="w-4 h-4 sound-off-icon hidden"></i>
+        </button>
+
+        <a href="inquire.html" class="liquid-glow-btn relative px-4 md:px-5 py-2 md:py-2.5 rounded-full text-xs font-semibold text-white tracking-wide border border-white/20 bg-gradient-to-r from-cyan-500 via-purple-600 to-amber-500 font-mono flex items-center gap-2">
+          <span>COMMISSION</span>
+          <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+        </a>
+
+        <button id="mobile-menu-toggle" class="lg:hidden w-9 h-9 rounded-full flex items-center justify-center border border-white/15 bg-white/[0.06] text-white">
+          <i data-lucide="menu" class="w-4 h-4"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-drawer" class="fixed inset-0 z-50 bg-[#040508]/90 backdrop-blur-3xl opacity-0 pointer-events-none transition-all duration-300 flex flex-col justify-between p-6">
+    <div class="flex items-center justify-between">
+      <span class="font-display font-bold text-sm tracking-wider text-white">EXPRESSIVE MODEL INDIA</span>
+      <button id="close-mobile-menu" class="w-10 h-10 rounded-full border border-white/20 bg-white/10 flex items-center justify-center text-white">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+    </div>
+    <div class="flex flex-col gap-5 py-6">
+      <a href="index.html" class="text-2xl font-display font-bold text-slate-200">Atelier Home</a>
+      <a href="works.html" class="text-2xl font-display font-bold text-slate-200">Indian Built Works</a>
+      <a href="research.html" class="text-2xl font-display font-bold text-slate-200">Computational Jali Lab</a>
+      <a href="atelier.html" class="text-2xl font-display font-bold text-slate-200">The Architects</a>
+      <a href="patrons.html" class="text-2xl font-display font-bold text-cyan-300">Patrons & Royal Trusts</a>
+      <a href="inquire.html" class="text-2xl font-display font-bold text-slate-200">Private Commission</a>
+    </div>
+    <div class="pt-6 border-t border-white/10">
+      <a href="inquire.html" class="block w-full text-center py-3.5 rounded-2xl bg-gradient-to-r from-cyan-400 via-fuchsia-500 to-amber-400 text-black font-display font-bold text-sm uppercase">
+        Initiate Commission
+      </a>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <section class="pt-36 md:pt-44 pb-12 px-4 md:px-8 relative z-20">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-amber-400/30 bg-amber-500/10 text-amber-300 text-xs font-mono mb-4">
+          ENDURING ALLIANCES & PRESTIGE
+        </div>
+        <h1 class="font-display font-extrabold text-4xl sm:text-6xl text-white mb-6">
+          Patrons of the <br>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-fuchsia-400 to-cyan-300">New Indian Architecture</span>
+        </h1>
+        <p class="text-base text-slate-300 font-light leading-relaxed">
+          We collaborate with royal heritage trusts, industrial visionary dynasties, and national research institutions who view architecture not merely as real estate, but as generational cultural monuments.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Grid -->
+  <section class="pb-28 px-4 md:px-8 relative z-20">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+      
+      <!-- 1: Maharana Gajendra -->
+      <div class="liquid-glass-card p-8 rounded-3xl border border-white/20 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center gap-1 text-amber-300 mb-6">
+            <i data-lucide="star" class="w-4 h-4 fill-amber-300"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-300"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-300"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-300"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-300"></i>
+          </div>
+          <p class="text-sm md:text-base text-slate-200 font-light italic leading-relaxed mb-6">
+            "Expressive Model Company gave our ancestral lake palace a 21st-century soul. The way the pink Dholpur stone flows into the liquid quartz envelope without visible joints is an absolute engineering marvel in the history of Rajasthan."
+          </p>
+        </div>
+        <div class="flex items-center gap-4 pt-6 border-t border-white/10">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="Maharaja Gajendra Singh" class="w-12 h-12 rounded-full object-cover border border-white/20">
+          <div>
+            <h2 class="font-display font-bold text-sm text-white">Yuvraj Gajendra Singh</h2>
+            <p class="text-xs font-mono text-amber-300">Maharana Heritage Cultural Trust</p>
+            <p class="text-[10px] text-slate-400">Commission: Jal Mandir Jaipur</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2: Dr. Suniti Piramal -->
+      <div class="liquid-glass-card p-8 rounded-3xl border border-white/20 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center gap-1 text-amber-300 mb-6">
+            <i data-lucide="star" class="w-4 h-4 fill-amber-300"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-300"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-300"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-300"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-300"></i>
+          </div>
+          <p class="text-sm md:text-base text-slate-200 font-light italic leading-relaxed mb-6">
+            "Living 60 floors above Nariman Point during the heavy monsoon used to mean constant shuttering. The kinetic liquid glass fins Aarav engineered deflect the high winds so smoothly that the entire tower feels like an immovable sanctuary."
+          </p>
+        </div>
+        <div class="flex items-center gap-4 pt-6 border-t border-white/10">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80" alt="Dr. Suniti Piramal" class="w-12 h-12 rounded-full object-cover border border-white/20">
+          <div>
+            <h2 class="font-display font-bold text-sm text-white">Dr. Suniti Piramal-Godrej</h2>
+            <p class="text-xs font-mono text-cyan-300">Consortium Co-Founder & Collector</p>
+            <p class="text-[10px] text-slate-400">Commission: Nariman Marine Monolith</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3: Rajesh Varma -->
+      <div class="liquid-glass-card p-8 rounded-3xl border border-white/20 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center gap-1 text-amber-300 mb-6">
+            <i data-lucide="star" class="w-4 h-4 fill-amber-300"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-300"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-300"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-300"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-300"></i>
+          </div>
+          <p class="text-sm md:text-base text-slate-200 font-light italic leading-relaxed mb-6">
+            "Our tech campus in Bengaluru wanted to prove that India can build carbon-negative workspaces without looking industrial. The Quantum Canopy has cut our campus energy load by 74% while feeling like working under an open rainforest."
+          </p>
+        </div>
+        <div class="flex items-center gap-4 pt-6 border-t border-white/10">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80" alt="Rajesh Varma" class="w-12 h-12 rounded-full object-cover border border-white/20">
+          <div>
+            <h2 class="font-display font-bold text-sm text-white">Rajesh Varma</h2>
+            <p class="text-xs font-mono text-emerald-300">Chief Infrastructure Officer, Aethelgard</p>
+            <p class="text-[10px] text-slate-400">Commission: Quantum Canopy</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Institutional Badges Ribbon -->
+  <section class="pb-28 px-4 md:px-8 relative z-20">
+    <div class="max-w-7xl mx-auto border-t border-white/10 pt-10">
+      <div class="flex flex-wrap items-center justify-around gap-8 opacity-70">
+        <span class="font-display font-bold text-lg tracking-widest text-white/80">MAHARANA TRUST</span>
+        <span class="font-display font-bold text-lg tracking-widest text-white/80">PIRAMAL-GODREJ</span>
+        <span class="font-display font-bold text-lg tracking-widest text-white/80">AETHELGARD INDIA</span>
+        <span class="font-display font-bold text-lg tracking-widest text-white/80">KASHI RIVERFRONT</span>
+        <span class="font-display font-bold text-lg tracking-widest text-white/80">OBEROI HORIZON</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-[#030407]/95 pt-12 pb-10 px-4 md:px-8">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between text-xs font-mono text-slate-400 gap-4">
+      <div>&copy; 2026 Expressive Model Company. Patron Trust Alliances.</div>
+      <div class="flex gap-6">
+        <a href="works.html" class="hover:text-cyan-300">Works</a>
+        <a href="atelier.html" class="hover:text-cyan-300">The Architects</a>
+        <a href="inquire.html" class="hover:text-cyan-300">Commission</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

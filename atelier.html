@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>The Indian Atelier & Architects | Expressive Model Company</title>
+  <meta name="description" content="Meet the visionary Indian architects, computational researchers, and master tactile craftsmen steering Expressive Model Company.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=Syne:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Syne', 'sans-serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            mono: ['Space Grotesk', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[#040508] text-[#E2E8F0] selection:bg-cyan-500/30 selection:text-white overflow-x-hidden antialiased">
+
+  <!-- Ambient Orbs -->
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden" aria-hidden="true">
+    <div class="liquid-orb orb-india-1"></div>
+    <div class="liquid-orb orb-india-2"></div>
+    <div class="liquid-orb orb-india-3"></div>
+  </div>
+
+  <div id="liquid-cursor-glow" class="fixed pointer-events-none z-50 w-[380px] h-[380px] rounded-full -translate-x-1/2 -translate-y-1/2 opacity-0 transition-opacity duration-300 blur-[75px] bg-gradient-to-r from-cyan-400/20 via-fuchsia-500/20 to-amber-400/20"></div>
+
+  <!-- Navigation -->
+  <header class="fixed top-4 md:top-6 inset-x-0 z-40 flex justify-center px-4">
+    <nav class="relative flex items-center justify-between w-full max-w-6xl px-4 md:px-7 py-3 md:py-3.5 rounded-full border border-white/15 bg-white/[0.04] backdrop-blur-2xl shadow-[0_12px_40px_rgba(0,0,0,0.55)]">
+      
+      <a href="index.html" class="group flex items-center gap-3">
+        <div class="relative w-9 h-9 md:w-10 md:h-10 rounded-2xl p-[1px] bg-gradient-to-br from-cyan-400 via-fuchsia-500 to-amber-400">
+          <div class="w-full h-full rounded-[15px] bg-[#07090F]/90 backdrop-blur-md flex items-center justify-center">
+            <span class="font-display font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white via-cyan-200 to-amber-200 text-sm md:text-base">EM</span>
+          </div>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-display font-bold text-sm md:text-base tracking-wide text-white">
+            EXPRESSIVE <span class="text-xs px-1.5 py-0.5 rounded-full bg-cyan-400/10 text-cyan-300 font-mono border border-cyan-400/30">ATELIER</span>
+          </span>
+          <span class="text-[9px] uppercase font-mono tracking-widest text-slate-400">The Architects</span>
+        </div>
+      </a>
+
+      <div class="hidden lg:flex items-center gap-1 bg-white/[0.03] p-1.5 rounded-full border border-white/10 backdrop-blur-lg">
+        <a href="index.html" class="px-4 py-1.5 text-xs font-medium text-slate-300 hover:text-white rounded-full transition-all hover:bg-white/10">Atelier</a>
+        <a href="works.html" class="px-4 py-1.5 text-xs font-medium text-slate-300 hover:text-white rounded-full transition-all hover:bg-white/10">Built Works</a>
+        <a href="research.html" class="px-4 py-1.5 text-xs font-medium text-slate-300 hover:text-white rounded-full transition-all hover:bg-white/10">Computational Jali</a>
+        <a href="atelier.html" class="px-4 py-1.5 text-xs font-medium rounded-full transition-all nav-pill-active">Architects</a>
+        <a href="patrons.html" class="px-4 py-1.5 text-xs font-medium text-slate-300 hover:text-white rounded-full transition-all hover:bg-white/10">Patrons</a>
+      </div>
+
+      <div class="flex items-center gap-2.5">
+        <button id="sound-toggle-btn" class="w-9 h-9 md:w-10 md:h-10 rounded-full flex items-center justify-center border border-white/10 bg-white/[0.05] text-slate-300 hover:text-white transition-all">
+          <i data-lucide="volume-2" class="w-4 h-4 sound-on-icon"></i>
+          <i data-lucide="volume-x" class="w-4 h-4 sound-off-icon hidden"></i>
+        </button>
+
+        <a href="inquire.html" class="liquid-glow-btn relative px-4 md:px-5 py-2 md:py-2.5 rounded-full text-xs font-semibold text-white tracking-wide border border-white/20 bg-gradient-to-r from-cyan-500 via-purple-600 to-amber-500 font-mono flex items-center gap-2">
+          <span>COMMISSION</span>
+          <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+        </a>
+
+        <button id="mobile-menu-toggle" class="lg:hidden w-9 h-9 rounded-full flex items-center justify-center border border-white/15 bg-white/[0.06] text-white">
+          <i data-lucide="menu" class="w-4 h-4"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-drawer" class="fixed inset-0 z-50 bg-[#040508]/90 backdrop-blur-3xl opacity-0 pointer-events-none transition-all duration-300 flex flex-col justify-between p-6">
+    <div class="flex items-center justify-between">
+      <span class="font-display font-bold text-sm tracking-wider text-white">EXPRESSIVE MODEL INDIA</span>
+      <button id="close-mobile-menu" class="w-10 h-10 rounded-full border border-white/20 bg-white/10 flex items-center justify-center text-white">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+    </div>
+    <div class="flex flex-col gap-5 py-6">
+      <a href="index.html" class="text-2xl font-display font-bold text-slate-200">Atelier Home</a>
+      <a href="works.html" class="text-2xl font-display font-bold text-slate-200">Indian Built Works</a>
+      <a href="research.html" class="text-2xl font-display font-bold text-slate-200">Computational Jali Lab</a>
+      <a href="atelier.html" class="text-2xl font-display font-bold text-cyan-300">The Architects</a>
+      <a href="patrons.html" class="text-2xl font-display font-bold text-slate-200">Patrons & Royal Trusts</a>
+      <a href="inquire.html" class="text-2xl font-display font-bold text-slate-200">Private Commission</a>
+    </div>
+    <div class="pt-6 border-t border-white/10">
+      <a href="inquire.html" class="block w-full text-center py-3.5 rounded-2xl bg-gradient-to-r from-cyan-400 via-fuchsia-500 to-amber-400 text-black font-display font-bold text-sm uppercase">
+        Initiate Commission
+      </a>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <section class="pt-36 md:pt-44 pb-12 px-4 md:px-8 relative z-20">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-cyan-400/30 bg-cyan-500/10 text-cyan-300 text-xs font-mono mb-4">
+          HUMAN ARCHITECTS & MASTER CRAFTSMEN
+        </div>
+        <h1 class="font-display font-extrabold text-4xl sm:text-6xl text-white mb-6">
+          The Minds Shaping <br>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-fuchsia-400 to-amber-300">India's New Enclaves</span>
+        </h1>
+        <p class="text-base text-slate-300 font-light leading-relaxed">
+          Combining deep roots in traditional Indian stone carving and Vedic spatial symmetry with world-leading computational parametric code.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Grid -->
+  <section class="pb-28 px-4 md:px-8 relative z-20">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+      
+      <!-- 1: Aarav Singhania -->
+      <div class="liquid-glass-card rounded-3xl overflow-hidden group">
+        <div class="relative h-80 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80" alt="Aarav Singhania" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#040508] via-transparent to-transparent"></div>
+          <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-black/50 text-[11px] font-mono text-cyan-300 border border-white/20">Mumbai HQ</span>
+        </div>
+        <div class="p-6">
+          <h2 class="font-display font-bold text-2xl text-white group-hover:text-cyan-300">Aarav Singhania</h2>
+          <p class="text-xs font-mono text-cyan-400 mt-0.5 mb-3">Founder & Principal Design Director</p>
+          <p class="text-xs text-slate-300 font-light leading-relaxed mb-4">
+            Graduate of CEPT Ahmedabad and Architectural Association (London). Curated the India Pavilion at the Venice Architecture Biennale. Spearheaded the Nariman Marine Monolith.
+          </p>
+          <div class="pt-3 border-t border-white/10 text-[11px] font-mono text-slate-400">
+            Specialization: Structural Liquid Envelopes
+          </div>
+        </div>
+      </div>
+
+      <!-- 2: Ananya Deshmukh -->
+      <div class="liquid-glass-card rounded-3xl overflow-hidden group">
+        <div class="relative h-80 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Ananya Deshmukh" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#040508] via-transparent to-transparent"></div>
+          <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-black/50 text-[11px] font-mono text-fuchsia-300 border border-white/20">Bengaluru Lab</span>
+        </div>
+        <div class="p-6">
+          <h2 class="font-display font-bold text-2xl text-white group-hover:text-fuchsia-300">Ananya Deshmukh</h2>
+          <p class="text-xs font-mono text-fuchsia-400 mt-0.5 mb-3">Partner & Lead Computational Jali Architect</p>
+          <p class="text-xs text-slate-300 font-light leading-relaxed mb-4">
+            Pioneered the translation of 15th-century Rajasthani stone screens into recursive parametric glass code. Former lead researcher at MIT Design Computation.
+          </p>
+          <div class="pt-3 border-t border-white/10 text-[11px] font-mono text-slate-400">
+            Specialization: Algorithmic Diagrids & Venturi Fluidics
+          </div>
+        </div>
+      </div>
+
+      <!-- 3: Dr. Vikramaditya Roy -->
+      <div class="liquid-glass-card rounded-3xl overflow-hidden group">
+        <div class="relative h-80 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80" alt="Dr. Vikramaditya Roy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#040508] via-transparent to-transparent"></div>
+          <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-black/50 text-[11px] font-mono text-amber-300 border border-white/20">New Delhi Studio</span>
+        </div>
+        <div class="p-6">
+          <h2 class="font-display font-bold text-2xl text-white group-hover:text-amber-300">Dr. Vikramaditya Roy</h2>
+          <p class="text-xs font-mono text-amber-400 mt-0.5 mb-3">Head of Bio-Climatic & Monsoon Physics</p>
+          <p class="text-xs text-slate-300 font-light leading-relaxed mb-4">
+            IIT Kharagpur doctorate. Engineered the natural thermodynamic cooling loops for the Quantum Canopy and the high-altitude Ladakh Observatory.
+          </p>
+          <div class="pt-3 border-t border-white/10 text-[11px] font-mono text-slate-400">
+            Specialization: Subterranean Geothermal & Passive Heat Sinks
+          </div>
+        </div>
+      </div>
+
+      <!-- 4: Meera Nambiar -->
+      <div class="liquid-glass-card rounded-3xl overflow-hidden group">
+        <div class="relative h-80 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=800&q=80" alt="Meera Nambiar" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#040508] via-transparent to-transparent"></div>
+          <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-black/50 text-[11px] font-mono text-emerald-300 border border-white/20">Kochi Atelier</span>
+        </div>
+        <div class="p-6">
+          <h2 class="font-display font-bold text-2xl text-white group-hover:text-emerald-300">Meera Nambiar</h2>
+          <p class="text-xs font-mono text-emerald-400 mt-0.5 mb-3">Director of Glass Craft & Tactile Prototyping</p>
+          <p class="text-xs text-slate-300 font-light leading-relaxed mb-4">
+            Bridges Kerala timber artisanry with molten borosilicate casting. Oversees physical mock-up facilities testing full-scale 1:1 architectural joints.
+          </p>
+          <div class="pt-3 border-t border-white/10 text-[11px] font-mono text-slate-400">
+            Specialization: Monolithic Glass Casting & Wood Tectonics
+          </div>
+        </div>
+      </div>
+
+      <!-- 5: Kabir Malhotra -->
+      <div class="liquid-glass-card rounded-3xl overflow-hidden group">
+        <div class="relative h-80 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" alt="Kabir Malhotra" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#040508] via-transparent to-transparent"></div>
+          <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-black/50 text-[11px] font-mono text-blue-300 border border-white/20">Jaipur Atelier</span>
+        </div>
+        <div class="p-6">
+          <h2 class="font-display font-bold text-2xl text-white group-hover:text-blue-300">Kabir Malhotra</h2>
+          <p class="text-xs font-mono text-blue-400 mt-0.5 mb-3">Principal Structural Engineer & Skyframe Lead</p>
+          <p class="text-xs text-slate-300 font-light leading-relaxed mb-4">
+            Master of complex post-tensioned cable systems and sandstone-to-glass structural load distribution across seismic zones IV and V.
+          </p>
+          <div class="pt-3 border-t border-white/10 text-[11px] font-mono text-slate-400">
+            Specialization: High-Velocity Wind Stabilization
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Regional Studios Section -->
+  <section class="pb-28 px-4 md:px-8 relative z-20">
+    <div class="max-w-7xl mx-auto">
+      <div class="liquid-glass-card p-8 md:p-12 rounded-3xl border border-white/20">
+        <h2 class="font-display font-bold text-2xl text-white mb-6">Atelier Studios Across India</h2>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-xs font-mono">
+          <div class="p-4 rounded-2xl bg-white/[0.03] border border-white/10">
+            <span class="text-cyan-300 font-semibold block text-sm mb-1">MUMBAI ATELIER</span>
+            <p class="text-slate-400 font-sans">Nariman Marine Horizon, 400021<br>Focus: Coastal Towers & Monoliths</p>
+          </div>
+          <div class="p-4 rounded-2xl bg-white/[0.03] border border-white/10">
+            <span class="text-fuchsia-300 font-semibold block text-sm mb-1">BENGALURU LAB</span>
+            <p class="text-slate-400 font-sans">Whitefield Biome Compound, 560066<br>Focus: Computational Jali & Diagrids</p>
+          </div>
+          <div class="p-4 rounded-2xl bg-white/[0.03] border border-white/10">
+            <span class="text-amber-300 font-semibold block text-sm mb-1">JAIPUR CRAFT STUDIO</span>
+            <p class="text-slate-400 font-sans">Amer Craft Pavilion, 302001<br>Focus: Sandstone-Glass Fusion</p>
+          </div>
+          <div class="p-4 rounded-2xl bg-white/[0.03] border border-white/10">
+            <span class="text-emerald-300 font-semibold block text-sm mb-1">NEW DELHI SUITE</span>
+            <p class="text-slate-400 font-sans">Sundar Nagar Enclave, 110003<br>Focus: Civic & Cultural Institutions</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-[#030407]/95 pt-12 pb-10 px-4 md:px-8">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between text-xs font-mono text-slate-400 gap-4">
+      <div>&copy; 2026 Expressive Model Company. The Indian Architects.</div>
+      <div class="flex gap-6">
+        <a href="works.html" class="hover:text-cyan-300">Works</a>
+        <a href="patrons.html" class="hover:text-cyan-300">Patrons</a>
+        <a href="inquire.html" class="hover:text-cyan-300">Commission</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+/* ==========================================================
+   EXPRESSIVE MODEL COMPANY: OP LIQUID GLASS ENGINE (INDIA EDITION)
+   High-FPS • Neon Jewel Tones • Apple VisionOS Polish
+   ========================================================== */
+
+:root {
+  --peacock-cyan: #00F5D4;
+  --gulal-magenta: #FF007F;
+  --imperial-saffron: #FF9F1C;
+  --kashmir-emerald: #10B981;
+  --celestial-blue: #4361EE;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.16);
+}
+
+/* Butter-smooth fast scrolling */
+html {
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Sleek Liquid Glass Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #040508;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--peacock-cyan);
+}
+
+/* Ambient Liquid Aurora Mesh (Optimized with GPU translate3d) */
+.liquid-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.5;
+  pointer-events: none;
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.orb-india-1 {
+  width: 60vw;
+  height: 60vw;
+  max-width: 650px;
+  max-height: 650px;
+  top: -10%;
+  left: -5%;
+  background: radial-gradient(circle, rgba(0, 245, 212, 0.35) 0%, rgba(123, 44, 191, 0.2) 70%, transparent 100%);
+}
+
+.orb-india-2 {
+  width: 65vw;
+  height: 65vw;
+  max-width: 700px;
+  max-height: 700px;
+  top: 35%;
+  right: -10%;
+  background: radial-gradient(circle, rgba(255, 0, 127, 0.3) 0%, rgba(255, 159, 28, 0.25) 70%, transparent 100%);
+}
+
+.orb-india-3 {
+  width: 55vw;
+  height: 55vw;
+  max-width: 600px;
+  max-height: 600px;
+  bottom: 5%;
+  left: 15%;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.25) 0%, rgba(67, 97, 238, 0.2) 70%, transparent 100%);
+}
+
+/* High Performance Apple Liquid Glass Panels */
+.liquid-glass-card {
+  position: relative;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.02) 100%);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 
+    0 12px 30px -5px rgba(0, 0, 0, 0.6),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.3);
+  transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.25s ease, box-shadow 0.25s ease;
+  transform: translateZ(0);
+}
+
+.liquid-glass-card:hover {
+  transform: translateY(-4px) scale(1.008);
+  border-color: rgba(0, 245, 212, 0.5);
+  box-shadow: 
+    0 20px 40px -10px rgba(0, 0, 0, 0.7),
+    0 0 25px rgba(0, 245, 212, 0.2),
+    inset 0 1px 2px 0 rgba(255, 255, 255, 0.5);
+}
+
+/* OP Shimmering Button Glow */
+.liquid-glow-btn {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.2s ease;
+}
+
+.liquid-glow-btn:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 30px rgba(0, 245, 212, 0.45);
+}
+
+.liquid-glow-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+  transition: 0.4s ease;
+}
+
+.liquid-glow-btn:hover::after {
+  left: 100%;
+}
+
+/* Fast Interactive Project Card */
+.project-card {
+  cursor: pointer;
+  transform: translateZ(0);
+  transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.25s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Active Nav Link Marker */
+.nav-pill-active {
+  background: rgba(255, 255, 255, 0.15) !important;
+  color: #FFFFFF !important;
+  border-color: rgba(0, 245, 212, 0.5) !important;
+  box-shadow: 0 0 15px rgba(0, 245, 212, 0.25);
+}
+
+/* Fast subtle glint */
+@keyframes specularPass {
+  0% { transform: translateX(-100%); }
+  50%, 100% { transform: translateX(200%); }
+}
+
+.specular-highlight {
+  position: relative;
+  overflow: hidden;
+}
+.specular-highlight::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
+  animation: specularPass 6s infinite ease-in-out;
+  pointer-events: none;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+  .liquid-orb {
+    filter: blur(50px);
+    opacity: 0.4;
+  }
+}
